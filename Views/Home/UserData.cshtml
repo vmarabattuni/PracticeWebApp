@@ -4,4 +4,13 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<p></p>
+<form action="Submit" method="post">
+    Name:<input  name="Name" type="text" /><br/><br />
+    Address:<input name="Address" type="text" /><br /><br />
+    City:<input name="City" type="text" /><br /><br />
+    Pincode:<input name="Pincode" type="text" /><br /><br />
+    Phone:<input name="Phone" type="text" /><br /><br />
+    <input  type="submit" value="submit" /><br /><br />
+    <input type="button" value="Cancel"  onclick="location.href='@Url.Action("Index", "Home")'"/>
+</form>

@@ -1,0 +1,18 @@
+﻿@model PracticeWebApp.Models.UserDataModels
+
+@{
+    ViewBag.Title = "Submit";
+}
+
+<h2>Submit</h2>
+
+<div class="container">
+    Name: @Model.Name <br /><br />
+    Address: @Model.Address <br /><br />
+    City: @Model.City <br /><br />
+    Pincode: @Model.Pincode <br /><br />
+    Phone: @Model.Phone
+
+    <p></p>
+    <button  onclick="location.href='@Url.Action("UserData", "Home")'">Add New Data</button>
+</div>
