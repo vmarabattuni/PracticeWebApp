@@ -22,10 +22,14 @@ namespace PracticeWebApp.Controllers
             return View();
         }
 
-        public ActionResult Submit(UserDataModels obj)
+        public ActionResult Submit(UserDataModel obj)
         {
+           // List<UserDataModel> PhoneBook = new List<UserDataModel>();
+           
 
-            Session["ListName"] += obj.Name;
+            //PhoneBook.Add(obj);
+           
+
             return View(obj);
         }
 

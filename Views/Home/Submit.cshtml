@@ -1,4 +1,7 @@
-﻿@model PracticeWebApp.Models.UserDataModels
+﻿@model PracticeWebApp.Models.UserDataModel 
+
+@*@model IEnumerable<PracticeWebApp.Models.UserDataModel>*@
+
 
 @{
     ViewBag.Title = "Submit";
@@ -14,5 +17,17 @@
     Phone: @Model.Phone
 
     <p></p>
-    <button  onclick="location.href='@Url.Action("UserData", "Home")'">Add New Data</button>
+    <button onclick="location.href='@Url.Action("UserData", "Home")'">Add New Data</button>
 </div>
+
+
+@*<div>
+    <table>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                @item.Name
+            </tr>
+        }
+    </table>
+</div>*@
