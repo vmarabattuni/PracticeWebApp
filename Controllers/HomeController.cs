@@ -10,27 +10,23 @@ namespace PracticeWebApp.Controllers
 {
     public class HomeController : Controller
     {
+        static List<ContactDataModel> PhoneBook = new List<ContactDataModel>();
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult UserData()
+        public ActionResult ContactData()
         {
             ViewBag.Message = "Enter User Data";
 
             return View();
         }
 
-        public ActionResult Submit(UserDataModel obj)
+        public ActionResult Submit(ContactDataModel obj)
         {
-           // List<UserDataModel> PhoneBook = new List<UserDataModel>();
-           
-
-            //PhoneBook.Add(obj);
-           
-
-            return View(obj);
+            PhoneBook.Add(obj);
+            return View(PhoneBook);
         }
 
     }

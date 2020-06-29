@@ -13,4 +13,8 @@
     Phone:<input name="Phone" type="text" /><br /><br />
     <input  type="submit" value="submit" /><br /><br />
     <input type="button" value="Cancel"  onclick="location.href='@Url.Action("Index", "Home")'"/>
+
 </form>
+
+
+@RenderSection("ViewContacts", false);

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace PracticeWebApp.Models
 {
-    public class UserDataModel
+    public class ContactDataModel
     {
         public String Name { get; set; }
         public String Address { get; set; }
