@@ -1,32 +1,33 @@
 ﻿@model IEnumerable<PracticeWebApp.Models.ContactDataModel>
 
-@section ViewContact {
-    <div class="container">
-        <table class="table">
-            <thead>
+@section ViewContacts {
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="auto">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">Pincode</th>
+                <th scope="col">Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contact in @Model)
+            {
                 <tr>
-                    <th scope="col">Name</th>
-                    <th scope="auto">Address</th>
-                    <th scope="col">City</th>
-                    <th scope="col">Pincode</th>
-                    <th scope="col">Phone</th>
+                    <td>@contact.Name</td>
+                    <td>@contact.Address</td>
+                    <td>@contact.City</td>
+                    <td>@contact.Pincode</td>
+                    <td>@contact.Phone</td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in @Model)
-                {
-                <tr>
-                    <th scope="row">@item.Name</th>
-                    <td>@item.Address</td>
-                    <td>@item.City</td>
-                    <td>@item.Pincode</td>
-                    <td>@item.Phone</td>
-                </tr>
-                }
-            </tbody>
-        </table>
+            }
+        </tbody>
+    </table>
 
-       @* <button onclick="location.href='@Url.Action("ContactData", "Home")'">Add New Data</button> *@
-    </div>
-
+    <button onclick="location.href='@Url.Action("ContactData", "Home")'">Add New Data</button>
+</div>
 }
+
+
